@@ -1,30 +1,46 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<!-- src/App.vue -->
+<script setup lang="ts">
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <nav class="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+    <main class="view">
+      <!-- Aquí montan tus vistas definidas en router/index.ts -->
+      <router-view/>
+    </main>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.nav a {
+  text-decoration: none;
+  color: #42b983;
+  font-weight: bold;
+}
+
+.nav a.router-link-active {
+  border-bottom: 2px solid #42b983;
+}
+
+.view {
+  padding: 2rem;
 }
 </style>
