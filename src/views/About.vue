@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Aquí puedes definir props, estados locales o lógica
 const info = 'Esta aplicación te permite leer textos y generar recomendaciones musicales vía código QR.'
 </script>
 

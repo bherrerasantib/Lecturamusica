@@ -1,4 +1,3 @@
-<!-- src/App.vue -->
 <script setup lang="ts">
 </script>
 
@@ -9,7 +8,6 @@
       <router-link to="/about">About</router-link>
     </nav>
     <main class="view">
-      <!-- Aquí montan tus vistas definidas en router/index.ts -->
       <router-view/>
     </main>
   </div>

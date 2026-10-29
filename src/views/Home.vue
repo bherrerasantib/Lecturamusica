@@ -1,9 +1,7 @@
-<!-- src/views/Home.vue -->
 <script setup lang="ts">
 import { ref } from 'vue'
 import chapter from '@/textos/cap1.json'
 
-// Datos de ejemplo para el índice
 const chapters = ref([
   { id: 1, title: 'Capítulo 1' },
   { id: 2, title: 'Capítulo 2' },
@@ -11,7 +9,6 @@ const chapters = ref([
   { id: 4, title: 'Capítulo 4' },
 ])
 
-// Datos de ejemplo para recomendaciones
 const recommendations = ref([
   { id: 1, title: 'Canción A', artist: 'Artista A' },
   { id: 2, title: 'Canción B', artist: 'Artista B' },
@@ -29,7 +26,6 @@ function generateQr(rec: { id: number; title: string }) {
 
 <template>
   <div class="home-grid">
-    <!-- Sidebar Índice -->
     <aside class="sidebar">
       <h2>Índice</h2>
       <ul>
@@ -43,13 +39,11 @@ function generateQr(rec: { id: number; title: string }) {
       </ul>
     </aside>
 
-    <!-- Contenido principal -->
     <main class="content">
       <h1>{{ chapter.titulo }}</h1>
       <p>{{ chapter.descripcion }}</p>
     </main>
 
-    <!-- Panel de recomendaciones -->
     <aside class="recommendations">
       <h2>Recomendaciones Música</h2>
       <ul>
@@ -84,7 +78,6 @@ function generateQr(rec: { id: number; title: string }) {
   box-sizing: border-box;
 }
 
-/* Índice */
 .sidebar {
   background: #f7f9fc;
   padding: 1rem;
@@ -117,7 +110,6 @@ function generateQr(rec: { id: number; title: string }) {
   color: #1e88e5;
 }
 
-/* Contenido del capítulo */
 .content {
   background: #fff;
   padding: 1.5rem;
@@ -134,7 +126,6 @@ function generateQr(rec: { id: number; title: string }) {
   color: #444;
 }
 
-/* Recomendaciones */
 .recommendations {
   background: #f7f9fc;
   padding: 1rem;
